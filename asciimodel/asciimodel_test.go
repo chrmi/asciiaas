@@ -50,4 +50,18 @@ func TestReadFile(t *testing.T) {
 
 	teardown()
 }
+
+func TestWriteFile(t *testing.T) {
+	setup()
+
+	todo := Todo{Task: "Test the Test"}
+
+	err := writeFile("test.txt", todo)
+	if err != nil {
+		t.Errorf("Problem writing to file: %v", err)
+	}
+
+	teardown()
+}
+
 */

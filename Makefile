@@ -23,7 +23,7 @@ BUILD_PATH="./build"
 DATA_PATH="./data"
 MOD_NAME="asciiaas"
 
-.PHONY: init test clean build run
+.PHONY: init test clean build run package demo
 
 default: test clean build run
 
@@ -61,3 +61,10 @@ build:
 run:
 	@echo "${RAINBOW} ${COLOR_C}Run: ${COLOR_D}${MOD_NAME}${STOP_COLOR}"
 	@cd ./$(BUILD_PATH) && ./$(MOD_NAME)
+
+package:
+	@docker build -t asciiaas/v1 .
+
+demo:
+	curl -X POST -d "{\"test-ascii\": \"ASCII test POST.\"}" -H 'Content-Type: application/json' "http://0.0.0.0:8097/text"
+	curl -X PUT -d "{\"test-ascii\": \"ASCII test PUT.\"}" -H 'Content-Type: application/json' "http://0.0.0.0:8097/text"

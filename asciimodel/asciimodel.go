@@ -35,3 +35,20 @@ func (model *Model) LookUp(key string) (string, error) {
 	}
 	return ascii, nil
 }
+
+func (model *Model) Add(key string, value string) (string, error) {
+	/*
+		file, err := os.OpenFile(fileName, os.O_APPEND|os.O_WRONLY, 0600)
+		if err != nil {
+			return err
+		}
+		defer file.Close()
+
+		_, err = file.WriteString(todo.Task + "\n")
+		if err != nil {
+			return err
+		}
+		return nil
+
+	*/
+}
