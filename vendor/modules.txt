@@ -13,8 +13,12 @@ gopkg.in/yaml.v3
 # localmods/asciibuilder v0.0.0-00010101000000-000000000000 => ./asciibuilder
 ## explicit; go 1.17
 localmods/asciibuilder
+# localmods/asciigenerator v0.0.0 => ./asciigenerator
+## explicit; go 1.17
+localmods/asciigenerator
 # localmods/asciimodel v0.0.0 => ./asciimodel
 ## explicit; go 1.17
 localmods/asciimodel
 # localmods/asciibuilder => ./asciibuilder
+# localmods/asciigenerator => ./asciigenerator
 # localmods/asciimodel => ./asciimodel

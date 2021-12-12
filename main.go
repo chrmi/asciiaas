@@ -26,7 +26,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case "GET":
-		handleGet(w)
+		handleGet(w, r)
 	case "POST":
 		handlePost(w, r)
 	default:
@@ -34,7 +34,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func handleGet(w http.ResponseWriter) {
+func handleGet(w http.ResponseWriter, r *http.Request) {
 	text := r.FormValue("text")
 
 	text, err := asciibuilder.Text(text)

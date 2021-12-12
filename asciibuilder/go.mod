@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/stretchr/testify v1.7.0
+	localmods/asciigenerator v0.0.0
 	localmods/asciimodel v0.0.0
 )
 
@@ -15,5 +16,6 @@ require (
 
 replace (
 	localmods/asciibuilder => ./
+	localmods/asciigenerator => ../asciigenerator
 	localmods/asciimodel => ../asciimodel
 )

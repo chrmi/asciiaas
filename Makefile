@@ -50,6 +50,7 @@ test:
 	@echo "${RAINBOW} ${COLOR_C}Test: ${COLOR_D}${MOD_NAME}${STOP_COLOR}"
 	@go test ./... --cover -v $(GOPKGS)
 	@cd asciimodel && go get -t asciimodel && go test
+	@cd asciigenerator && go get -t asciigenerator && go test
 	@cd asciibuilder && go get -t asciibuilder && go test
 
 build:

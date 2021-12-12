@@ -1,6 +1,7 @@
 package asciibuilder
 
 import (
+	"localmods/asciigenerator"
 	"localmods/asciimodel"
 )
 
@@ -16,6 +17,12 @@ func Text(key string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	tmptxt, err := asciigenerator.RandomLine()
+	if err != nil {
+		return "", err
+	}
+	text += tmptxt
 
 	return text, nil
 }
